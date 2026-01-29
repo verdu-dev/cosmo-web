@@ -31,8 +31,9 @@ export default function ProblemSolution() {
               también puede hacerlo.
             </h2>
             <p className="text-neutral-600 text-xl">
-              Hola, soy Laia. He creado Cosmo para acompañar a personas y
-              proyectos del mundo de la salud mental en sus redes sociales.
+              Hola, soy Laia. He creado <nobr>Cosmo Studio</nobr> para acompañar
+              a personas y proyectos del mundo de la salud y el bienestar en sus
+              redes sociales.
             </p>
             <p className="text-neutral-600 text-xl">
               Sé lo que significa cuidar de otros, sostener espacios seguros y
