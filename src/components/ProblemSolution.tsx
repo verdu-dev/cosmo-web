@@ -9,9 +9,10 @@ export default function ProblemSolution() {
           </h2>
           <p className="text-xl leading-relaxed text-neutral-600">
             Y que las redes sociales puede sentirse como otra obligación más.
-            Por eso creamos Cosmos: una agencia de gestión de redes sociales que
-            entiende tu mundo y transforma tu presencia digital en un reflejo
-            auténtico de lo que haces, sin que tengas que gestionarlo tú.
+            Por eso creamos <nobr>Cosmo Studio</nobr>: una agencia de gestión de
+            redes sociales que entiende tu mundo y transforma tu presencia
+            digital en un reflejo auténtico de lo que haces, sin que tengas que
+            gestionarlo tú.
           </p>
           <div className="pt-8">
             <div className="inline-block px-8 py-4 bg-petrol-200 rounded-2xl">

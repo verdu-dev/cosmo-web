@@ -9,15 +9,16 @@ export default function Hero() {
 
       <div className="relative section-container z-10 flex flex-col items-center max-w-6xl text-center">
         <h1 className="text-petrol-50 font-bold text-3xl sm:text-4xl md:text-[2.75rem] lg:text-6xl">
-          Acompañamiento digital para{" "}
-          <span className="text-petrol-300">marcas </span> que cuidan
+          Gestión de redes sociales para{" "}
+          <span className="text-petrol-300">profesionales </span> de la salud y
+          el bienestar
         </h1>
 
         <p className="text-petrol-100 mt-4 text-xl">
-          Acompañamiento digital para profesionales del bienestar. En Cosmo
-          Studio ayudamos a psicólogas, terapeutas y marcas de salud a construir
-          una presencia digital estratégica, coherente y sostenible, para que su
-          marca crezca mientras ellas ganan tiempo.
+          Gestión de redes sociales para marcas que cuidan. En Cosmo Studio
+          ayudamos a psicólogas, terapeutas y profesionales de la salud y el
+          bienestar a construir una presencia digital estratégica, coherente y
+          sostenible, para que tu marca crezca mientras ganas tiempo.
         </p>
 
         <div className="flex justify-center gap-4 mt-12">
