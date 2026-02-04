@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative py-12 min-h-svh sm:py-16 md:py-20 flex items-center lg:py-24 bg-terracotta-50"
+      className="relative py-24 min-h-svh flex items-center bg-terracotta-50"
     >
       <div className="absolute inset-0 bg-[url('/hero2.webp')] bg-cover bg-center blur-[2px] md:blur-none"></div>
       <div className="absolute inset-0 bg-black/40"></div>
