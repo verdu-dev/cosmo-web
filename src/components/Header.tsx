@@ -37,7 +37,7 @@ export default function Header() {
               src="/Cosmo_white.png"
               alt="Cosmo Logo"
               className={`w-auto cursor-pointer transition-all duration-300 ${
-                isScrolled ? "h-7" : "h-[38px]"
+                isScrolled ? "h-7" : "h-7 md:h-[38px]"
               }`}
               onClick={() => scrollToSection("hero")}
             />

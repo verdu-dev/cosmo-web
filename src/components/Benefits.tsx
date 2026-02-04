@@ -52,7 +52,7 @@ export default function Benefits() {
                 return (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    className="bg-white rounded-2xl p-6 shadow-sm"
                   >
                     <div className="flex md:flex-row flex-col items-start space-x-4">
                       <div className="flex-shrink-0">

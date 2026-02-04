@@ -14,7 +14,7 @@ export default function Hero() {
           el bienestar
         </h1>
 
-        <p className="text-petrol-100 mt-4 text-xl">
+        <p className="text-petrol-100 mt-4 text-lg md:text-xl">
           Gestión de redes sociales para marcas que cuidan. En Cosmo Studio
           ayudamos a psicólogas, terapeutas y profesionales de la salud y el
           bienestar a construir una presencia digital estratégica, coherente y
@@ -24,11 +24,11 @@ export default function Hero() {
         <div className="flex justify-center gap-4 mt-12">
           <a
             href="#problem-solution"
-            className="cta-secondary text-dark px-12 py-4"
+            className="cta-secondary text-dark px-8 md:px-12 py-4"
           >
             Más info
           </a>
-          <a href="#contacto" className="cta-primary px-12 py-4">
+          <a href="#contacto" className="cta-primary px-8 md:px-12 py-4">
             Contacto
           </a>
         </div>

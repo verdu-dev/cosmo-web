@@ -33,13 +33,13 @@ const reviews: Review[] = [
 export default function Reviews() {
   const [currentReview, setCurrentReview] = useState(0);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const timer = setInterval(() => {
       setCurrentReview((prev) => (prev + 1) % reviews.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, []); */
 
   // Swipe handlers
   const [touchStart, setTouchStart] = useState<number | null>(null);

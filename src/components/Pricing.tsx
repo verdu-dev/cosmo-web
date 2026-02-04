@@ -66,10 +66,10 @@ export default function Pricing() {
             // Container
             <div
               key={index}
-              className={`relative rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 ${
+              className={`relative rounded-3xl p-8 ${
                 Plan.isHighlighted
                   ? "bg-petrol-400 text-light shadow-2xl scale-105 border-2 border-petrol-400"
-                  : "bg-terracotta-50 shadow-lg hover:shadow-xl"
+                  : "bg-terracotta-50 shadow-lg"
               }`}
             >
               {Plan.isHighlighted && (
