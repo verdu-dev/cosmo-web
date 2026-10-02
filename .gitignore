@@ -21,3 +21,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Originales temporales de la optimización de imágenes
+public/bak/

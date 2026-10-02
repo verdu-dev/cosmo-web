@@ -48,7 +48,7 @@ export default function ProblemSolution() {
 
           <div className="flex justify-center md:justify-end mt-8 md:mt-0">
             <img
-              src="/Laia_Cosmo_Studio.jpg"
+              src="/Laia_Cosmo_Studio.webp"
               alt="Laia trabajando en Cosmo Studio"
               className="w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl"
             />

@@ -114,7 +114,7 @@ export default function Quiz() {
         <div className="absolute inset-0 bg-gradient-to-br from-cosmos-petrol to-cosmos-petrol/90"></div>
         <div className="absolute inset-0 opacity-15">
           <img
-            src="/Planning.jpg"
+            src="/Planning.webp"
             alt="Planificación y organización"
             className="w-full h-full object-cover"
           />
@@ -148,7 +148,7 @@ export default function Quiz() {
       <div className="absolute inset-0 bg-gradient-to-br from-cosmos-petrol to-cosmos-petrol/90"></div>
       <div className="absolute inset-0 opacity-15">
         <img
-          src="/Planning.jpg"
+          src="/Planning.webp"
           alt="Planificación y organización"
           className="w-full h-full object-cover"
         />

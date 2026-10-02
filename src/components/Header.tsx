@@ -34,7 +34,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <img
-              src="/Cosmo_white.png"
+              src="/Cosmo_white.webp"
               alt="Cosmo Logo"
               className={`w-auto cursor-pointer transition-all duration-300 ${
                 isScrolled ? "h-7" : "h-7 md:h-[38px]"

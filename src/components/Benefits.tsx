@@ -78,7 +78,7 @@ export default function Benefits() {
           <div className="order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(62,92,100,0.25)] transition-all duration-500 transform">
               <img
-                src="/Management.jpg"
+                src="/Management.webp"
                 alt="Organización y planificación profesional"
                 className="size-full object-cover transform transition-transform duration-700"
               />
