@@ -2,23 +2,26 @@
  * Locale helpers: path <-> locale resolution, URL building and the
  * cosmo.lang persistence rules.
  *
- * URL strategy: `/` = Spanish (default), `/ca/` = Catalan.
+ * URL strategy: `/` = Spanish (default), `/ca/` = Catalan, `/en/` = English.
  */
 
-export type Locale = "es" | "ca";
+export type Locale = "es" | "ca" | "en";
 
-export const SUPPORTED_LOCALES: readonly Locale[] = ["es", "ca"] as const;
+export const SUPPORTED_LOCALES: readonly Locale[] = ["es", "ca", "en"] as const;
 
 export const LANG_STORAGE_KEY = "cosmo.lang";
 
 const BASE_URL = "https://www.cosmostudio.es";
 
-/** `ca` (only the exact first segment) -> ca, everything else -> es. */
+/** `ca`/`en` (only the exact first segment) -> the locale, everything else -> es. */
 export function normalizeLocale(value?: string | null): Locale {
-  return value?.toLowerCase() === "ca" ? "ca" : "es";
+  const v = value?.toLowerCase();
+  if (v === "ca") return "ca";
+  if (v === "en") return "en";
+  return "es";
 }
 
-/** Locale derived from the URL path: first segment `ca` -> Catalan, otherwise Spanish. */
+/** Locale derived from the URL path: first segment `ca`/`en` -> that locale, otherwise Spanish. */
 export function resolveLocaleFromPath(
   pathname: string = window.location.pathname,
 ): Locale {
@@ -28,7 +31,7 @@ export function resolveLocaleFromPath(
 
 /** Absolute base URL for a locale (canonical/hreflang targets). */
 export function localizedUrl(locale: Locale): string {
-  return locale === "ca" ? `${BASE_URL}/ca/` : `${BASE_URL}/`;
+  return locale === "es" ? `${BASE_URL}/` : `${BASE_URL}/${locale}/`;
 }
 
 /**
@@ -40,13 +43,14 @@ export function localizedPath(
   pathname: string = window.location.pathname,
   hash: string = window.location.hash,
 ): string {
-  const rest = pathname.replace(/^\/ca(?=\/|$)/, "");
+  // Strip any existing locale prefix (`ca`/`en`) before re-adding the target one.
+  const rest = pathname.replace(/^\/(?:ca|en)(?=\/|$)/, "");
   let base: string;
-  if (locale === "ca") {
+  if (locale !== "es") {
     base =
       rest === "" || rest === "/"
-        ? "/ca/"
-        : `/ca${rest.startsWith("/") ? rest : `/${rest}`}`;
+        ? `/${locale}/`
+        : `/${locale}${rest.startsWith("/") ? rest : `/${rest}`}`;
   } else {
     base = rest === "" ? "/" : rest;
   }
@@ -66,7 +70,7 @@ export function getStoredLocale(): Locale | null {
   if (!storage) return null;
   try {
     const value = storage.getItem(LANG_STORAGE_KEY);
-    return value === "ca" || value === "es" ? value : null;
+    return value === "ca" || value === "es" || value === "en" ? value : null;
   } catch {
     return null;
   }
@@ -82,10 +86,10 @@ export function setStoredLocale(locale: Locale): void {
   }
 }
 
-/** Catalan is the only browser-language hint we follow on first visit. */
-function browserPrefersCatalan(): boolean {
+/** First-visit browser-language hints follow `ca` first, then `en`. */
+function browserLanguageStartsWith(prefix: "ca" | "en"): boolean {
   try {
-    return window.navigator.language.toLowerCase().startsWith("ca");
+    return window.navigator.language.toLowerCase().startsWith(prefix);
   } catch {
     return false;
   }
@@ -93,26 +97,33 @@ function browserPrefersCatalan(): boolean {
 
 /**
  * Decide the locale to boot with.
- * - `/ca/...` URLs are always Catalan: the path is the source of truth for SEO.
+ * - `/ca/...` and `/en/...` URLs always use their locale: the path is the
+ *   source of truth for SEO.
  * - On the Spanish root, a previously stored `cosmo.lang` choice wins, and a
- *   stored/first-visit Catalan preference redirects to the canonical `/ca/`
+ *   stored/first-visit `ca`/`en` preference redirects to the canonical locale
  *   URL so every URL keeps its own canonical + hreflang matrix.
- * - First visit without a stored choice follows `navigator.language` only when
- *   it starts with `ca`; any other browser language stays on Spanish.
+ * - First visit without a stored choice follows `navigator.language` when it
+ *   starts with `ca` (Catalan) or `en` (English), in that order; any other
+ *   browser language stays on Spanish.
  */
 export function computeInitialLocale(): {
   locale: Locale;
   redirect?: string;
 } {
   const pathLocale = resolveLocaleFromPath();
-  if (pathLocale === "ca") return { locale: "ca" };
+  if (pathLocale !== "es") return { locale: pathLocale };
 
   const stored = getStoredLocale();
-  if (stored === "ca") return { locale: "ca", redirect: localizedPath("ca") };
+  if (stored === "ca" || stored === "en") {
+    return { locale: stored, redirect: localizedPath(stored) };
+  }
   if (stored === "es") return { locale: "es" };
 
-  if (browserPrefersCatalan()) {
+  if (browserLanguageStartsWith("ca")) {
     return { locale: "ca", redirect: localizedPath("ca") };
+  }
+  if (browserLanguageStartsWith("en")) {
+    return { locale: "en", redirect: localizedPath("en") };
   }
   return { locale: "es" };
 }

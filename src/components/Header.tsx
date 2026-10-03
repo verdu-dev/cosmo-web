@@ -3,13 +3,28 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { localizedPath, setStoredLocale, type Locale } from "../utils/locale";
 
-const LANGUAGE_CODES: Locale[] = ["es", "ca"];
+const LANGUAGE_CODES: Locale[] = ["es", "ca", "en"];
+
+const LANGUAGE_LABELS: Record<Locale, string> = {
+  es: "ES",
+  ca: "CAT",
+  en: "EN",
+};
+
+const LANGUAGE_ARIA_KEYS: Record<Locale, string> = {
+  es: "header.langEs",
+  ca: "header.langCa",
+  en: "header.langEn",
+};
 
 function LanguageSwitcher({ onSwitch }: { onSwitch?: () => void }) {
   const { t, i18n } = useTranslation();
-  const current: Locale = i18n.language.toLowerCase().startsWith("ca")
+  const language = i18n.language.toLowerCase();
+  const current: Locale = language.startsWith("ca")
     ? "ca"
-    : "es";
+    : language.startsWith("en")
+      ? "en"
+      : "es";
 
   const switchTo = (target: Locale) => {
     if (target === current) return;
@@ -32,7 +47,7 @@ function LanguageSwitcher({ onSwitch }: { onSwitch?: () => void }) {
           key={code}
           type="button"
           onClick={() => switchTo(code)}
-          aria-label={code === "es" ? t("header.langEs") : t("header.langCa")}
+          aria-label={t(LANGUAGE_ARIA_KEYS[code])}
           aria-pressed={current === code}
           className={`rounded-full px-2.5 py-1 text-sm font-bold transition-colors ${
             current === code
@@ -40,7 +55,7 @@ function LanguageSwitcher({ onSwitch }: { onSwitch?: () => void }) {
               : "text-petrol-100 hover:text-petrol-50"
           }`}
         >
-          {code === "es" ? "ES" : "CAT"}
+          {LANGUAGE_LABELS[code]}
         </button>
       ))}
     </div>

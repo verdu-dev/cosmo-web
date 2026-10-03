@@ -1,0 +1,229 @@
+{
+  "seo": {
+    "title": "Cosmo Studio • Social Media Management",
+    "description": "Cosmo Studio is a digital marketing agency specialised in social media management for health and wellness professionals."
+  },
+  "header": {
+    "logoAlt": "Cosmo Logo",
+    "navHome": "Home",
+    "navPlans": "Plans",
+    "navClients": "Our clients",
+    "cta": "Let's talk?",
+    "menuAria": "Toggle menu",
+    "langSwitcher": "Change language",
+    "langEs": "Spanish",
+    "langCa": "Catalan",
+    "langEn": "English"
+  },
+  "hero": {
+    "titleBefore": "Social media management for ",
+    "titleAccent": "health and wellness ",
+    "titleAfter": "professionals",
+    "subtitle": "Social media management for brands that care. At Cosmo Studio we help psychologists, therapists and health and wellness professionals build a strategic, coherent and sustainable digital presence, so your brand grows while you gain time.",
+    "ctaMore": "More info",
+    "ctaContact": "Contact"
+  },
+  "problemSolution": {
+    "headline1": "We know that caring for others often means neglecting yourself.",
+    "introBefore": "And that social media can feel like just another obligation. That's why we created ",
+    "introAfter": ": a social media management agency that understands your world and turns your digital presence into an authentic reflection of what you do, without you having to manage it yourself.",
+    "quote": "Because your time is valuable. And so is your message.",
+    "headline2Before": "Your work transforms lives, and your ",
+    "headline2Accent": "digital presence ",
+    "headline2After": "can do the same.",
+    "bioBefore": "Hi, I'm Laia. I created ",
+    "bioAfter": " to accompany people and projects from the world of health and wellness on their social media.",
+    "body2": "I know what it means to care for others, to hold safe spaces and to accompany deep processes. I also know that this kind of care can leave little room for you.",
+    "body3": "I'm here to walk alongside you and take care of your digital presence while you take care of what really matters.",
+    "imageAlt": "Laia working at Cosmo Studio"
+  },
+  "benefits": {
+    "titleBefore": "Why ",
+    "titleAccent": "outsource",
+    "titleAfter": " your social media?",
+    "subtitle": "Get your time back and boost your digital presence",
+    "items": {
+      "horas": {
+        "title": "Save hours every week",
+        "description": "Get your time back for what really matters: your patients, your family, your self-care. We take care of your social media."
+      },
+      "pacientes": {
+        "title": "Connect with potential patients",
+        "description": "Attract the people who truly need your help with authentic content that reflects your essence and the way you work."
+      },
+      "esencia": {
+        "title": "Feel like your digital brand finally reflects who you are",
+        "description": "An authentic, cared-for online presence, coherent with the way you accompany others. Without losing your essence along the way."
+      },
+      "crecimiento": {
+        "title": "Grow your practice from knowledge and without overwhelm",
+        "description": "Sustainable, conscious growth. No rushing, no pressure, but with strategy and a clear purpose."
+      }
+    },
+    "imageAlt": "Professional organisation and planning"
+  },
+  "pricing": {
+    "title": "Choose the option that cares best for you and your business",
+    "intro": "Every plan includes personalised support and fluid communication. Because we don't work for you, we work with you.",
+    "popularBadge": "Popular",
+    "moreInfo": "More information",
+    "note": "Every project is unique. The final price is adapted to your goals, the number of networks and the volume of content you need.",
+    "customPlan": {
+      "title": "Custom plan",
+      "description": "Need something different? We create a fully personalised plan for you. Professional photography, video editing, advertising management, complete branding... Tell us what you need.",
+      "button": "Let's talk about your project"
+    },
+    "plans": {
+      "presencia": {
+        "name": "Plan Presencia Digital",
+        "subtitle": "To start with coherence",
+        "price": "A partir de 250€/mes",
+        "features": [
+          "Personalised initial strategy",
+          "2 weekly posts",
+          "Visual content design",
+          "Copywriting aligned with your voice",
+          "Quarterly metrics analysis"
+        ]
+      },
+      "conecta": {
+        "name": "Plan Conecta",
+        "subtitle": "To grow with strategy",
+        "price": "A partir de 450€/mes",
+        "features": [
+          "Everything in the Plan Presencia Digital",
+          "3 weekly posts",
+          "2 weekly Stories",
+          "Direct message management",
+          "Reels editing"
+        ]
+      },
+      "impulsa": {
+        "name": "Plan Impulsa",
+        "subtitle": "To forget about everything",
+        "price": "A partir de 850€/mes",
+        "features": [
+          "Everything in the Plan Conecta",
+          "Reels recording",
+          "Full community management",
+          "Collaborations with other profiles"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Our clients",
+    "intro": "Every project is unique, like every person we accompany. Here are some of the results we have achieved together.",
+    "prevClient": "Previous client",
+    "nextClient": "Next client",
+    "viewClient": "View client {{number}}",
+    "feedAlt": "Feed of {{name}}",
+    "clients": {
+      "taktikum": {
+        "type": "Psychopedagogy practice",
+        "growth": "+38% more views",
+        "followers": "+27% more engagement",
+        "description": "They were looking for a solid digital presence more than new clients. We created valuable content and a new feed design more coherent with their identity and the way they work, boosting engagement.",
+        "highlightsTitle": "Last month:",
+        "highlights": [
+          "+38% views from new people",
+          "+27% more engagement vs previous"
+        ]
+      },
+      "equazenes": {
+        "type": "Dietary supplements - Pharmaceutical laboratory",
+        "growth": "+31% more views",
+        "followers": "+22% people reached",
+        "description": "We created the profile from scratch, designed the content and managed the community. Their growth is organic and follows a clear line aligned with their objective, just like the rest of the brands we work with.",
+        "highlightsTitle": "Last month:",
+        "highlights": [
+          "+31% views from new users",
+          "+22% people reached vs previous month"
+        ]
+      },
+      "totterapia": {
+        "type": "Multidisciplinary health centre",
+        "growth": "+38% growth",
+        "followers": "+52% audience",
+        "description": "We reactivated their social media with a coherent strategy, video recording and editing, and a presence across every social network. Within a few months they are growing organically, and every week messages arrive from people interested in their services.",
+        "highlightsTitle": "Last month:",
+        "highlights": [
+          "+38% growth in views",
+          "+52% new audience every month"
+        ]
+      },
+      "intuity": {
+        "type": "Systemic and Transpersonal Coaching",
+        "growth": "+34% more views",
+        "followers": "+23% more engagement",
+        "description": "We optimised their Instagram, applied a clear strategy and left a solid foundation so they could keep growing on their own. They now manage their day-to-day socials while Cosmo keeps editing their reels, maintaining the visual coherence and the quality of the content.",
+        "highlightsTitle": "Last month:",
+        "highlights": [
+          "+34% views from new audiences",
+          "+23% more engagement on their edited reels"
+        ]
+      }
+    },
+    "carousel": [
+      {
+        "text": "Working with Cosmo has been liberating. I finally have time for my patients without feeling like I'm neglecting my online presence. Laia understands exactly what I want to convey.",
+        "role": "Psychologist and Therapist"
+      },
+      {
+        "text": "They don't just manage my Instagram, they do it with a sensitivity few agencies have. You can tell they know the mental health world. My community has grown organically and genuinely.",
+        "role": "Director of a Psychology Centre"
+      },
+      {
+        "text": "Cosmo helped me find my voice on social media. Before, I felt lost; now I have a digital presence that truly represents me. And without dedicating a single minute of my time.",
+        "role": "Coach and Facilitator"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "What our clients say",
+    "intro": "Real testimonials from professionals who have transformed their digital presence",
+    "viewReview": "View review {{number}}",
+    "ignacio": {
+      "text": "I worked with Laia for a year and the experience was exceptional. She stands out for her strategic vision, her analytical skills and, above all, her impeccable execution. Beyond the professional side, she is a very warm person with deep personal development work that is directly reflected in the quality of her work and in how she accompanies others. If you are considering hiring her, my recommendation is clear: don't hesitate for a second."
+    },
+    "pablo": {
+      "text": "Working with Laia is a real pleasure. Thanks to her we have been able to give structure and momentum to our communication, gaining fluency, coherence and clarity. She accompanied us with great professionalism through marketing and advertising processes, making everything easy and efficient. She is pragmatic, responsible and deeply committed to what she does. You can tell she gives 100% and cares about every detail. We are very happy to keep collaborating together."
+    },
+    "anna": {
+      "text": "Working with Laia has been very easy and pleasant from the start. She understood from the very first moment what Taktikum is and how we wanted to communicate, respecting the tone, values and sensitivity of the project. She is engaged, organised and has excellent judgement when creating content, always with a careful and coherent eye. On a personal level, she brings us peace of mind, professionalism and trust, and that is key in a project like ours."
+    },
+    "bruno": {
+      "text": "Laia brings a great combination of strategic judgement and sensitivity. She has helped us communicate more precisely and make better decisions, always from a clear, practical perspective aligned with our values. A professional, well-focused collaboration."
+    }
+  },
+  "contact": {
+    "title": "Let's talk about your brand",
+    "intro": "Leave us a message and we'll get back to you shortly. It will be a pleasure to listen to you and accompany you.",
+    "whatsappLabel": "Whatsapp",
+    "emailLabel": "Email"
+  },
+  "form": {
+    "nameLabel": "Contact name",
+    "namePlaceholder": "e.g. Julia García",
+    "contactLabel": "Email or phone",
+    "contactPlaceholder": "e.g. juliagarcia@email.com / 600 600 600",
+    "messageLabel": "Your message",
+    "messagePlaceholder": "Write your message...",
+    "sendVia": "Send form via",
+    "optionEmail": "Email",
+    "optionWhatsapp": "Whatsapp"
+  },
+  "footer": {
+    "logoAlt": "Cosmo Logo",
+    "legal": "Legal notice: this website does not collect personal data or third-party cookies | Cosmo Studio © {{year}}"
+  },
+  "whatsapp": {
+    "ariaLabel": "Contact us on WhatsApp",
+    "label": "Let's talk!"
+  },
+  "cookies": {
+    "text": "We use cookies to improve your experience and analyse traffic. By clicking \"Accept\", you accept our use of cookies.",
+    "reject": "Reject",
+    "accept": "Accept"
+  }
+}

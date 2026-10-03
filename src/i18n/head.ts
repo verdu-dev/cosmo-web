@@ -1,5 +1,6 @@
 import esJson from "./locales/es.json";
 import caJson from "./locales/ca.json";
+import enJson from "./locales/en.json";
 import { localizedUrl, type Locale } from "../utils/locale";
 
 interface SeoCopy {
@@ -9,6 +10,7 @@ interface SeoCopy {
 
 const es = esJson as { seo: SeoCopy };
 const ca = caJson as { seo: SeoCopy };
+const en = enJson as { seo: SeoCopy };
 
 interface AlternateLink {
   hreflang: string;
@@ -29,8 +31,9 @@ interface HeadContent {
 }
 
 // Per-locale head matrix:
-//   Spanish (`/`):      canonical `/`,  alternates es -> `/`, ca -> `/ca/`, x-default -> `/`
-//   Catalan (`/ca/`):   canonical `/ca/`, alternates es -> `/`, ca -> `/ca/`, x-default -> `/`
+//   Spanish (`/`):      canonical `/`,  alternates es -> `/`, ca -> `/ca/`, en -> `/en/`, x-default -> `/`
+//   Catalan (`/ca/`):   canonical `/ca/`, alternates es -> `/`, ca -> `/ca/`, en -> `/en/`, x-default -> `/`
+//   English (`/en/`):   canonical `/en/`, alternates es -> `/`, ca -> `/ca/`, en -> `/en/`, x-default -> `/`
 const headBundles: Record<Locale, HeadContent> = {
   es: {
     lang: "es",
@@ -45,6 +48,7 @@ const headBundles: Record<Locale, HeadContent> = {
     alternates: [
       { hreflang: "es", href: localizedUrl("es") },
       { hreflang: "ca", href: localizedUrl("ca") },
+      { hreflang: "en", href: localizedUrl("en") },
       { hreflang: "x-default", href: localizedUrl("es") },
     ],
   },
@@ -61,6 +65,24 @@ const headBundles: Record<Locale, HeadContent> = {
     alternates: [
       { hreflang: "es", href: localizedUrl("es") },
       { hreflang: "ca", href: localizedUrl("ca") },
+      { hreflang: "en", href: localizedUrl("en") },
+      { hreflang: "x-default", href: localizedUrl("es") },
+    ],
+  },
+  en: {
+    lang: "en",
+    title: en.seo.title,
+    description: en.seo.description,
+    ogTitle: en.seo.title,
+    ogDescription: en.seo.description,
+    ogUrl: localizedUrl("en"),
+    twitterTitle: en.seo.title,
+    twitterDescription: en.seo.description,
+    canonical: localizedUrl("en"),
+    alternates: [
+      { hreflang: "es", href: localizedUrl("es") },
+      { hreflang: "ca", href: localizedUrl("ca") },
+      { hreflang: "en", href: localizedUrl("en") },
       { hreflang: "x-default", href: localizedUrl("es") },
     ],
   },
