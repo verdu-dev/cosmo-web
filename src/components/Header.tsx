@@ -36,7 +36,7 @@ function LanguageSwitcher({ onSwitch }: { onSwitch?: () => void }) {
           aria-pressed={current === code}
           className={`rounded-full px-2.5 py-1 text-sm font-bold transition-colors ${
             current === code
-              ? "bg-petrol-50 text-petrol-900 underline underline-offset-4"
+              ? "bg-petrol-50 text-petrol-900"
               : "text-petrol-100 hover:text-petrol-50"
           }`}
         >
