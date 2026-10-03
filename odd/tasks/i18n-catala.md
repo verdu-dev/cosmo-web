@@ -53,7 +53,7 @@ Components use `useTranslation()` / `t()`; head manager called once in `main.tsx
   4. Wire selector in `Header` (desktop + mobile), persistence, first-visit detection.
   5. Head manager + canonical/hreflang per locale; sitemap with 2 URLs + hreflang annotations.
   6. Verify: build, preview both locales (dev + Vercel preview), URL behavior, head correctness.
-- **Phase 2 — English:** add `en.json`, `/en/` route + rewrites + hreflang + sitemap entry; register alternate on Catalan/Spanish canonical.
+- **Phase 2 — English (DONE, commit 331715b):** `en.json` added, `/en/` route + rewrites + hreflang (es↔ca↔en, x-default→/) + 3-URL sitemap; alternates registered on every canonical. RDD-approved.
 
 ## Verification
 - `npm run build` OK; both locale URLs resolve on preview (`/` and `/ca/`).
