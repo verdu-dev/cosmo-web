@@ -1,0 +1,228 @@
+{
+  "seo": {
+    "title": "Cosmo Studio • Gestión de Redes Sociales",
+    "description": "Cosmo Studio es una agencia de marketing digital especializada en la gestión de redes sociales para profesionales de la salud y el bienestar."
+  },
+  "header": {
+    "logoAlt": "Cosmo Logo",
+    "navHome": "Inicio",
+    "navPlans": "Planes",
+    "navClients": "Nuestras clientas",
+    "cta": "¿Hablamos?",
+    "menuAria": "Toggle menu",
+    "langSwitcher": "Cambiar idioma",
+    "langEs": "Español",
+    "langCa": "Catalán"
+  },
+  "hero": {
+    "titleBefore": "Gestión de redes sociales para ",
+    "titleAccent": "profesionales ",
+    "titleAfter": "de la salud y el bienestar",
+    "subtitle": "Gestión de redes sociales para marcas que cuidan. En Cosmo Studio ayudamos a psicólogas, terapeutas y profesionales de la salud y el bienestar a construir una presencia digital estratégica, coherente y sostenible, para que tu marca crezca mientras ganas tiempo.",
+    "ctaMore": "Más info",
+    "ctaContact": "Contacto"
+  },
+  "problemSolution": {
+    "headline1": "Sabemos que cuidar de otras, muchas veces significa descuidarte a ti misma.",
+    "introBefore": "Y que las redes sociales puede sentirse como otra obligación más. Por eso creamos ",
+    "introAfter": ": una agencia de gestión de redes sociales que entiende tu mundo y transforma tu presencia digital en un reflejo auténtico de lo que haces, sin que tengas que gestionarlo tú.",
+    "quote": "Porque tu tiempo es valioso. Y tu mensaje, también.",
+    "headline2Before": "Tu trabajo transforma vidas, tu ",
+    "headline2Accent": "presencia digital ",
+    "headline2After": "también puede hacerlo.",
+    "bioBefore": "Hola, soy Laia. He creado ",
+    "bioAfter": " para acompañar a personas y proyectos del mundo de la salud y el bienestar en sus redes sociales.",
+    "body2": "Sé lo que significa cuidar de otros, sostener espacios seguros y acompañar procesos profundos. También sé que ese cuidado puede dejar poco espacio para ti.",
+    "body3": "Estoy aquí para caminar contigo y cuidar tu presencia digital mientras tú cuidas de lo que realmente importa.",
+    "imageAlt": "Laia trabajando en Cosmo Studio"
+  },
+  "benefits": {
+    "titleBefore": "¿Por qué ",
+    "titleAccent": "delegar",
+    "titleAfter": " tus redes sociales?",
+    "subtitle": "Recupera tu tiempo y potencia tu presencia digital",
+    "items": {
+      "horas": {
+        "title": "Ahorra horas cada semana",
+        "description": "Recupera tu tiempo para lo que realmente importa: tus pacientes, tu familia, tu autocuidado. Nosotras nos ocupamos de tus redes sociales."
+      },
+      "pacientes": {
+        "title": "Conecta con pacientes potenciales",
+        "description": "Atrae a las personas que realmente necesitan tu ayuda con contenido auténtico que refleja tu esencia y tu forma de trabajar."
+      },
+      "esencia": {
+        "title": "Siente que tu marca digital por fin refleja quién eres",
+        "description": "Una presencia online auténtica, cuidada y coherente con tu forma de acompañar. Sin perder tu esencia en el camino."
+      },
+      "crecimiento": {
+        "title": "Haz crecer tu centro desde el conocimiento y sin agobios",
+        "description": "Crecimiento sostenible y consciente. Sin prisas, sin presión, pero con estrategia y propósito claro."
+      }
+    },
+    "imageAlt": "Organización y planificación profesional"
+  },
+  "pricing": {
+    "title": "Elige la opción que más os cuide a ti y a tu negocio",
+    "intro": "Todos los planes incluyen acompañamiento personalizado y comunicación fluida. Porque no trabajamos para ti, trabajamos contigo.",
+    "popularBadge": "Popular",
+    "moreInfo": "Más información",
+    "note": "Cada proyecto es único. El precio final se adapta a tus objetivos, número de redes y volumen de contenido que necesites.",
+    "customPlan": {
+      "title": "Plan Personalizado",
+      "description": "¿Necesitas algo diferente? Creamos un plan completamente personalizado para ti. Fotografía profesional, edición de vídeo, gestión de publicidad, branding completo... Cuéntanos qué necesitas.",
+      "button": "Hablemos de tu proyecto"
+    },
+    "plans": {
+      "presencia": {
+        "name": "Plan Presencia Digital",
+        "subtitle": "Para empezar con coherencia",
+        "price": "A partir de 250€/mes",
+        "features": [
+          "Estrategia inicial personalizada",
+          "2 publicaciones semanales",
+          "Diseño de contenido visual",
+          "Copywriting alineado con tu voz",
+          "Análisis trimestral de métricas"
+        ]
+      },
+      "conecta": {
+        "name": "Plan Conecta",
+        "subtitle": "Para crecer con estrategia",
+        "price": "A partir de 450€/mes",
+        "features": [
+          "Todo lo del Plan Presencia Digital",
+          "3 publicaciones semanales",
+          "2 Stories semanales",
+          "Gestión de mensajes directos",
+          "Edición de Reels"
+        ]
+      },
+      "impulsa": {
+        "name": "Plan Impulsa",
+        "subtitle": "Para olvidarte de todo",
+        "price": "A partir de 850€/mes",
+        "features": [
+          "Todo lo del Plan Conecta",
+          "Grabación de Reels",
+          "Gestión completa de comunidad",
+          "Colaboración con otros perfiles"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Nuestras clientas",
+    "intro": "Cada proyecto es único, como cada persona que acompañamos. Estos son algunos de los resultados que hemos conseguido juntas.",
+    "prevClient": "Cliente anterior",
+    "nextClient": "Siguiente cliente",
+    "viewClient": "Ver cliente {{number}}",
+    "feedAlt": "Feed de {{name}}",
+    "clients": {
+      "taktikum": {
+        "type": "Gabinete Psicopedagógico",
+        "growth": "+38% de visualizaciones",
+        "followers": "+27% más interacción",
+        "description": "Buscaban una presencia digital sólida más que captar nuevos clientes. Creamos contenido de valor y un nuevo diseño de feed más coherente con su identidad y su forma de trabajar, potenciando la interacción.",
+        "highlightsTitle": "Último mes:",
+        "highlights": [
+          "+38% de visualizaciones de personas nuevas",
+          "+27% más interacción VS\u00a0anterior"
+        ]
+      },
+      "equazenes": {
+        "type": "Complementos alimenticios - Laboratorio farmacéutico",
+        "growth": "+31% de visualizaciones",
+        "followers": "+22% personas alcanzadas",
+        "description": "Creamos el perfil desde cero, diseñamos los contenidos y gestionamos la comunidad. Su crecimiento es orgánico y sigue una línea clara y alineada con su objetivo, igual que el resto de marcas con las que trabajamos.",
+        "highlightsTitle": "Último mes:",
+        "highlights": [
+          "+31% de visualizaciones de usuarios nuevos",
+          "+22% personas alcanzadas\u00a0VS mes\u00a0anterior"
+        ]
+      },
+      "totterapia": {
+        "type": "Centro de salud multidisciplinar",
+        "growth": "+38% de crecimiento",
+        "followers": "+52% de audiencia",
+        "description": "Reactivamos sus redes con una estrategia coherente, grabación y edición de vídeos y presencia en todas las redes sociales. En pocos meses están creciendo de forma orgánica y cada semana llegan mensajes de personas interesadas en sus servicios.",
+        "highlightsTitle": "Último mes:",
+        "highlights": [
+          "+38% de crecimiento en\u00a0visualizaciones",
+          "+52% de audiencia nueva cada mes"
+        ]
+      },
+      "intuity": {
+        "type": "Coaching Sistémico y Transpersonal",
+        "growth": "+34% de visualizaciones",
+        "followers": "+23% más interacción",
+        "description": "Optimizamos su Instagram, aplicamos una estrategia clara y dejamos una base sólida para que pudieran continuar creciendo por su cuenta. Actualmente gestionan su día a día en redes mientras desde Cosmo seguimos editando sus reels, manteniendo la coherencia visual y la calidad del contenido.",
+        "highlightsTitle": "Último mes:",
+        "highlights": [
+          "+34% de visualizaciones de audiencia nuevas",
+          "+23% más interacción en sus\u00a0reels\u00a0editados"
+        ]
+      }
+    },
+    "carousel": [
+      {
+        "text": "Trabajar con Cosmos ha sido liberador. Por fin tengo tiempo para mis pacientes sin sentir que descido mi presencia online. Laia entiende perfectamente lo que quiero transmitir.",
+        "role": "Psicóloga y Terapeuta"
+      },
+      {
+        "text": "No solo gestionan mi Instagram, sino que lo hacen con una sensibilidad que pocas agencias tienen. Se nota que conocen el mundo de la salud mental. Mi comunidad ha crecido de forma orgánica y genuina.",
+        "role": "Directora de Centro de Psicología"
+      },
+      {
+        "text": "Cosmos me ha ayudado a encontrar mi voz en redes. Antes me sentía perdida y ahora tengo una presencia digital que realmente me representa. Y sin dedicarle ni un minuto de mi tiempo.",
+        "role": "Coach y Facilitadora"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Qué dicen nuestras clientas",
+    "intro": "Testimonios reales de profesionales que han transformado su presencia digital",
+    "viewReview": "Ver review {{number}}",
+    "ignacio": {
+      "text": "Trabajé con Laia durante un año y la experiencia fue excepcional. Destaca por su visión estratégica, su capacidad de análisis y, sobre todo, por su impecable ejecución. Más allá de lo profesional, es una persona muy cercana, con un profundo trabajo de desarrollo personal que se refleja directamente en la calidad de su trabajo y en cómo acompaña a los demás. Si está valorando contratarla, mi recomendación es clara: no lo dudes ni un segundo."
+    },
+    "pablo": {
+      "text": "Treballar amb la Laia és un autèntic gust. Gràcies a ella hem pogut donar estructura i impuls a la nostra comunicació, guanyant fluïdesa, coherència i claredat. Ens ha acompanyat amb molta professionalitat en processos de màrqueting i publicitat, fent-ho tot fàcil i eficient. És una persona pragmàtica, responsable i molt compromesa amb el que fa. Es nota que hi posa el 100% i que cuida cada detall. Estem molt contents de seguir colaborant junts."
+    },
+    "anna": {
+      "text": "Treballar amb la Laia ha estat molt fàcil i agradable des del principi. Ha sabut entendre des del primer moment què és Taktikum i com volíem comunicar-nos, respectant el to, els valors i la sensibilitat del projecte. És implicada, organitzada i té molt bon criteri a l'hora de crear contingut, sempre amb una mirada cuidada i coherent. Personalment ens aporta tranquil·litat, professionalitat i confiança, i això en un projecte com el nostre és clau."
+    },
+    "bruno": {
+      "text": "Laia aporta una combinación genial de criterio estratégico y sensibilidad. Nos ha ayudado a comunicar con más precisión y a tomar mejores decisiones, siempre desde una mirada clara, práctica y alineada con nuestros valores. Una colaboración profesional y muy bien enfocada."
+    }
+  },
+  "contact": {
+    "title": "Hablemos de tu marca",
+    "intro": "Déjanos tu mensaje y te contactamos en breve. Será un placer escucharte y acompañarte.",
+    "whatsappLabel": "Whatsapp",
+    "emailLabel": "Correo electrónico"
+  },
+  "form": {
+    "nameLabel": "Nombre de contacto",
+    "namePlaceholder": "Ej. Julia García",
+    "contactLabel": "Correo electrónico o teléfono",
+    "contactPlaceholder": "Ej. juliagarcia@email.com / 600 600 600",
+    "messageLabel": "Tu mensaje",
+    "messagePlaceholder": "Escribe tu mensaje...",
+    "sendVia": "Enviar formulario a través de",
+    "optionEmail": "Email",
+    "optionWhatsapp": "Whatsapp"
+  },
+  "footer": {
+    "logoAlt": "Cosmo Logo",
+    "legal": "Aviso legal: esta web no recopila datos personales ni cookies de terceros | Cosmo Studio © {{year}}"
+  },
+  "whatsapp": {
+    "ariaLabel": "Contactar por WhatsApp",
+    "label": "¡Hablemos!"
+  },
+  "cookies": {
+    "text": "Utilizamos cookies para mejorar tu experiencia y analizar el tráfico. Al hacer clic en \"Aceptar\", aceptas nuestro uso de cookies.",
+    "reject": "Rechazar",
+    "accept": "Aceptar"
+  }
+}

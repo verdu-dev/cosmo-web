@@ -1,7 +1,54 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
+import { localizedPath, setStoredLocale, type Locale } from "../utils/locale";
+
+const LANGUAGE_CODES: Locale[] = ["es", "ca"];
+
+function LanguageSwitcher({ onSwitch }: { onSwitch?: () => void }) {
+  const { t, i18n } = useTranslation();
+  const current: Locale = i18n.language.toLowerCase().startsWith("ca")
+    ? "ca"
+    : "es";
+
+  const switchTo = (target: Locale) => {
+    if (target === current) return;
+    onSwitch?.();
+    // Persist the explicit choice first so a Spanish-root boot is never
+    // redirected back to the Catalan URL, then full page load to the locale
+    // URL for a clean per-locale head.
+    setStoredLocale(target);
+    window.location.assign(localizedPath(target));
+  };
+
+  return (
+    <div
+      role="group"
+      aria-label={t("header.langSwitcher")}
+      className="flex items-center gap-1"
+    >
+      {LANGUAGE_CODES.map((code) => (
+        <button
+          key={code}
+          type="button"
+          onClick={() => switchTo(code)}
+          aria-label={code === "es" ? t("header.langEs") : t("header.langCa")}
+          aria-pressed={current === code}
+          className={`rounded-full px-2.5 py-1 text-sm font-bold transition-colors ${
+            current === code
+              ? "bg-petrol-50 text-petrol-900 underline underline-offset-4"
+              : "text-petrol-100 hover:text-petrol-50"
+          }`}
+        >
+          {code === "es" ? "ES" : "CAT"}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export default function Header() {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -35,7 +82,7 @@ export default function Header() {
           <div className="flex items-center">
             <img
               src="/Cosmo_white.webp"
-              alt="Cosmo Logo"
+              alt={t("header.logoAlt")}
               className={`w-auto cursor-pointer transition-all duration-300 ${
                 isScrolled ? "h-7" : "h-7 md:h-[38px]"
               }`}
@@ -48,32 +95,33 @@ export default function Header() {
               onClick={() => scrollToSection("hero")}
               className="hover:text-cosmos-terracotta transition-colors duration-200"
             >
-              Inicio
+              {t("header.navHome")}
             </button>
             <button
               onClick={() => scrollToSection("Planes")}
               className="hover:text-cosmos-terracotta transition-colors duration-200"
             >
-              Planes
+              {t("header.navPlans")}
             </button>
             <button
               onClick={() => scrollToSection("clientes")}
               className="hover:text-cosmos-terracotta transition-colors duration-200"
             >
-              Nuestras clientas
+              {t("header.navClients")}
             </button>
             <button
               onClick={() => scrollToSection("contacto")}
               className="cta-primary text-sm bg-petrol-700"
             >
-              ¿Hablamos?
+              {t("header.cta")}
             </button>
+            <LanguageSwitcher />
           </nav>
 
           <button
             className="md:hidden p-2 hover:bg-petrol-700/80 rounded-lg transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={t("header.menuAria")}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -87,26 +135,29 @@ export default function Header() {
               onClick={() => scrollToSection("hero")}
               className="py-3 px-4 hover:bg-cosmos-terracotta/10 rounded-lg transition-colors"
             >
-              Inicio
+              {t("header.navHome")}
             </button>
             <button
               onClick={() => scrollToSection("Planes")}
               className="py-3 px-4 hover:bg-cosmos-terracotta/10 rounded-lg transition-colors"
             >
-              Planes
+              {t("header.navPlans")}
             </button>
             <button
               onClick={() => scrollToSection("clientes")}
               className="py-3 px-4 hover:bg-cosmos-terracotta/10 rounded-lg transition-colors"
             >
-              Nuestras clientas
+              {t("header.navClients")}
             </button>
             <button
               onClick={() => scrollToSection("contacto")}
               className="cta-primary text-center bg-petrol-700"
             >
-              ¿Hablamos?
+              {t("header.cta")}
             </button>
+            <div className="flex justify-center pt-2">
+              <LanguageSwitcher onSwitch={() => setIsMenuOpen(false)} />
+            </div>
           </nav>
         </div>
       )}

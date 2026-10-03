@@ -1,0 +1,228 @@
+{
+  "seo": {
+    "title": "Cosmo Studio • Gestió de Xarxes Socials",
+    "description": "Cosmo Studio és una agència de màrqueting digital especialitzada en la gestió de xarxes socials per a professionals de la salut i el benestar."
+  },
+  "header": {
+    "logoAlt": "Cosmo Logo",
+    "navHome": "Inici",
+    "navPlans": "Plans",
+    "navClients": "Les nostres clientes",
+    "cta": "Parlem?",
+    "menuAria": "Alterna el menú",
+    "langSwitcher": "Canvi d'idioma",
+    "langEs": "Espanyol",
+    "langCa": "Català"
+  },
+  "hero": {
+    "titleBefore": "Gestió de xarxes socials per a ",
+    "titleAccent": "professionals ",
+    "titleAfter": "de la salut i el benestar",
+    "subtitle": "Gestió de xarxes socials per a marques que tenen cura. A Cosmo Studio ajudem psicòlogues, terapeutes i professionals de la salut i el benestar a construir una presència digital estratègica, coherent i sostenible, perquè la teva marca creixi mentre guanyes temps.",
+    "ctaMore": "Més info",
+    "ctaContact": "Contacte"
+  },
+  "problemSolution": {
+    "headline1": "Sabem que tenir cura dels altres, moltes vegades, vol dir descuidar-te a tu mateixa.",
+    "introBefore": "I que les xarxes socials poden semblar una altra obligació més. Per això vam crear ",
+    "introAfter": ": una agència de gestió de xarxes socials que entén el teu món i transforma la teva presència digital en un reflex autèntic del que fas, sense que hagis de gestionar-ho tu.",
+    "quote": "Perquè el teu temps és valuós. I el teu missatge, també.",
+    "headline2Before": "La teva feina transforma vides, la teva ",
+    "headline2Accent": "presència digital ",
+    "headline2After": "també ho pot fer.",
+    "bioBefore": "Hola, sóc la Laia. He creat ",
+    "bioAfter": " per acompanyar persones i projectes del món de la salut i el benestar en les seves xarxes socials.",
+    "body2": "Sé què vol dir tenir cura dels altres, sostenir espais segurs i acompanyar processos profunds. També sé que aquesta cura pot deixar poc espai per a tu.",
+    "body3": "Sóc aquí per caminar al teu costat i tenir cura de la teva presència digital mentre tu tens cura del que realment importa.",
+    "imageAlt": "Laia treballant a Cosmo Studio"
+  },
+  "benefits": {
+    "titleBefore": "Per què ",
+    "titleAccent": "delegar",
+    "titleAfter": " les teves xarxes socials?",
+    "subtitle": "Recupera el teu temps i impulsa la teva presència digital",
+    "items": {
+      "horas": {
+        "title": "Estalvia hores cada setmana",
+        "description": "Recupera el teu temps per al que realment importa: els teus pacients, la teva família, la teva cura personal. Nosaltres ens encarreguem de les teves xarxes socials."
+      },
+      "pacientes": {
+        "title": "Connecta amb pacients potencials",
+        "description": "Atreu les persones que realment necessiten la teva ajuda amb contingut autèntic que reflecteix la teva essència i la teva manera de treballar."
+      },
+      "esencia": {
+        "title": "Sents que la teva marca digital, finalment, reflecteix qui ets",
+        "description": "Una presència en línia autèntica, cuidada i coherent amb la teva manera d'acompanyar. Sense perdre la teva essència pel camí."
+      },
+      "crecimiento": {
+        "title": "Fes créixer el teu centre des del coneixement i sense neguits",
+        "description": "Creixement sostenible i conscient. Sense presses, sense pressió, però amb estratègia i propòsit clar."
+      }
+    },
+    "imageAlt": "Organització i planificació professional"
+  },
+  "pricing": {
+    "title": "Tria l'opció que més et cuidi a tu i al teu negoci",
+    "intro": "Tots els plans inclouen acompanyament personalitzat i comunicació fluida. Perquè no treballem per a tu, treballem amb tu.",
+    "popularBadge": "Popular",
+    "moreInfo": "Més informació",
+    "note": "Cada projecte és únic. El preu final s'adapta als teus objectius, al nombre de xarxes i al volum de contingut que necessitis.",
+    "customPlan": {
+      "title": "Pla personalitzat",
+      "description": "Necessites una altra cosa? Creem un pla completament personalitzat per a tu. Fotografia professional, edició de vídeo, gestió de publicitat, branding complet... Explica'ns què necessites.",
+      "button": "Parlem del teu projecte"
+    },
+    "plans": {
+      "presencia": {
+        "name": "Plan Presencia Digital",
+        "subtitle": "Per començar amb coherència",
+        "price": "A partir de 250€/mes",
+        "features": [
+          "Estratègia inicial personalitzada",
+          "2 publicacions setmanals",
+          "Disseny de contingut visual",
+          "Copywriting alineat amb la teva veu",
+          "Anàlisi trimestral de mètriques"
+        ]
+      },
+      "conecta": {
+        "name": "Plan Conecta",
+        "subtitle": "Per créixer amb estratègia",
+        "price": "A partir de 450€/mes",
+        "features": [
+          "Tot el del Plan Presencia Digital",
+          "3 publicacions setmanals",
+          "2 Stories setmanals",
+          "Gestió de missatges directes",
+          "Edició de Reels"
+        ]
+      },
+      "impulsa": {
+        "name": "Plan Impulsa",
+        "subtitle": "Per oblidar-te de tot",
+        "price": "A partir de 850€/mes",
+        "features": [
+          "Tot el del Plan Conecta",
+          "Enregistrament de Reels",
+          "Gestió completa de comunitat",
+          "Col·laboració amb altres perfils"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Les nostres clientes",
+    "intro": "Cada projecte és únic, com cada persona que acompanyem. Aquests són alguns dels resultats que hem aconseguit juntes.",
+    "prevClient": "Clienta anterior",
+    "nextClient": "Clienta següent",
+    "viewClient": "Veure clienta {{number}}",
+    "feedAlt": "Feed de {{name}}",
+    "clients": {
+      "taktikum": {
+        "type": "Gabinet Psicopedagògic",
+        "growth": "+38% de visualitzacions",
+        "followers": "+27% més interacció",
+        "description": "Buscaven una presència digital sòlida més que no pas captar clients nous. Vam crear contingut de valor i un disseny de feed més coherent amb la seva identitat i la seva manera de treballar, potenciant la interacció.",
+        "highlightsTitle": "Últim mes:",
+        "highlights": [
+          "+38% de visualitzacions de persones noves",
+          "+27% més interacció VS\u00a0anterior"
+        ]
+      },
+      "equazenes": {
+        "type": "Complements alimentaris - Laboratori farmacèutic",
+        "growth": "+31% de visualitzacions",
+        "followers": "+22% persones assolides",
+        "description": "Vam crear el perfil des de zero, vam dissenyar els continguts i vam gestionar la comunitat. El seu creixement és orgànic i segueix una línia clara i alineada amb el seu objectiu, igual que la resta de marques amb les quals treballem.",
+        "highlightsTitle": "Últim mes:",
+        "highlights": [
+          "+31% de visualitzacions d'usuaris nous",
+          "+22% persones assolides\u00a0VS mes\u00a0anterior"
+        ]
+      },
+      "totterapia": {
+        "type": "Centre de salut multidisciplinari",
+        "growth": "+38% de creixement",
+        "followers": "+52% d'audiència",
+        "description": "Vam reactivar les seves xarxes amb una estratègia coherent, enregistrament i edició de vídeos i presència a totes les xarxes socials. En pocs mesos estan creixent de manera orgànica i cada setmana arriben missatges de persones interessades en els seus serveis.",
+        "highlightsTitle": "Últim mes:",
+        "highlights": [
+          "+38% de creixement en\u00a0visualitzacions",
+          "+52% d'audiència nova cada mes"
+        ]
+      },
+      "intuity": {
+        "type": "Coaching Sistèmic i Transpersonal",
+        "growth": "+34% de visualitzacions",
+        "followers": "+23% més interacció",
+        "description": "Vam optimitzar el seu Instagram, vam aplicar una estratègia clara i vam deixar una base sòlida perquè poguessin continuar creixent pel seu compte. Actualment gestionen el seu dia a dia a les xarxes mentre des de Cosmo seguim editant els seus reels, mantenint la coherència visual i la qualitat del contingut.",
+        "highlightsTitle": "Últim mes:",
+        "highlights": [
+          "+34% de visualitzacions d'audiència nova",
+          "+23% més interacció en els seus reels editats"
+        ]
+      }
+    },
+    "carousel": [
+      {
+        "text": "Treballar amb Cosmos ha estat alliberador. Per fi tinc temps per als meus pacients sense sentir que descuido la meva presència en línia. Laia entén perfectament el que vull transmetre.",
+        "role": "Psicòloga i Terapeuta"
+      },
+      {
+        "text": "No només gestionen el meu Instagram, sinó que ho fan amb una sensibilitat que poques agències tenen. Es nota que coneixen el món de la salut mental. La meva comunitat ha crescut de manera orgànica i genuïna.",
+        "role": "Directora de Centre de Psicologia"
+      },
+      {
+        "text": "Cosmos m'ha ajudat a trobar la meva veu a les xarxes. Abans em sentia perduda i ara tinc una presència digital que realment em representa. I sense dedicar-hi ni un minut del meu temps.",
+        "role": "Coach i Facilitadora"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Què diuen les nostres clientes",
+    "intro": "Testimonis reals de professionals que han transformat la seva presència digital",
+    "viewReview": "Veure review {{number}}",
+    "ignacio": {
+      "text": "Vaig treballar amb la Laia durant un any i l'experiència va ser excepcional. Destaca per la seva visió estratègica, la seva capacitat d'anàlisi i, sobretot, per la seva execució impecable. Més enllà de l'àmbit professional, és una persona molt propera, amb un profund treball de desenvolupament personal que es reflecteix directament en la qualitat de la seva feina i en com acompanya els altres. Si esteu valorant contractar-la, la meva recomanació és clara: no ho dubtis ni un segon."
+    },
+    "pablo": {
+      "text": "Treballar amb la Laia és un autèntic gust. Gràcies a ella hem pogut donar estructura i impuls a la nostra comunicació, guanyant fluïdesa, coherència i claredat. Ens ha acompanyat amb molta professionalitat en processos de màrqueting i publicitat, fent-ho tot fàcil i eficient. És una persona pragmàtica, responsable i molt compromesa amb el que fa. Es nota que hi posa el 100% i que cuida cada detall. Estem molt contents de seguir colaborant junts."
+    },
+    "anna": {
+      "text": "Treballar amb la Laia ha estat molt fàcil i agradable des del principi. Ha sabut entendre des del primer moment què és Taktikum i com volíem comunicar-nos, respectant el to, els valors i la sensibilitat del projecte. És implicada, organitzada i té molt bon criteri a l'hora de crear contingut, sempre amb una mirada cuidada i coherent. Personalment ens aporta tranquil·litat, professionalitat i confiança, i això en un projecte com el nostre és clau."
+    },
+    "bruno": {
+      "text": "Laia aporta una combinació genial de criteri estratègic i sensibilitat. Ens ha ajudat a comunicar amb més precisió i a prendre millors decisions, sempre des d'una mirada clara, pràctica i alineada amb els nostres valors. Una col·laboració professional i molt ben enfocada."
+    }
+  },
+  "contact": {
+    "title": "Parlem de la teva marca",
+    "intro": "Deixa'ns el teu missatge i et contactarem ben aviat. Serà un plaer escoltar-te i acompanyar-te.",
+    "whatsappLabel": "Whatsapp",
+    "emailLabel": "Correu electrònic"
+  },
+  "form": {
+    "nameLabel": "Nom de contacte",
+    "namePlaceholder": "Per exemple, Julia García",
+    "contactLabel": "Correu electrònic o telèfon",
+    "contactPlaceholder": "Per exemple, juliagarcia@email.com / 600 600 600",
+    "messageLabel": "El teu missatge",
+    "messagePlaceholder": "Escriu el teu missatge...",
+    "sendVia": "Envia el formulari mitjançant",
+    "optionEmail": "Email",
+    "optionWhatsapp": "Whatsapp"
+  },
+  "footer": {
+    "logoAlt": "Cosmo Logo",
+    "legal": "Avís legal: aquest web no recopila dades personals ni cookies de tercers | Cosmo Studio © {{year}}"
+  },
+  "whatsapp": {
+    "ariaLabel": "Contacta'ns per WhatsApp",
+    "label": "Parlem!"
+  },
+  "cookies": {
+    "text": "Fem servir cookies per millorar la teva experiència i analitzar el trànsit. En fer clic a \"Acceptar\", acceptes el nostre ús de cookies.",
+    "reject": "Rebutjar",
+    "accept": "Acceptar"
+  }
+}

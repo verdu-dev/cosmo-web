@@ -1,47 +1,38 @@
+import { useTranslation } from "react-i18next";
 import { Check, Sparkles } from "lucide-react";
 
-const Planes = [
-  {
-    name: "Plan Presencia Digital",
-    subtitle: "Para empezar con coherencia",
-    price: "A partir de 250€/mes",
-    features: [
-      "Estrategia inicial personalizada",
-      "2 publicaciones semanales",
-      "Diseño de contenido visual",
-      "Copywriting alineado con tu voz",
-      "Análisis trimestral de métricas",
-    ],
-    isHighlighted: false,
-  },
-  {
-    name: "Plan Conecta",
-    subtitle: "Para crecer con estrategia",
-    price: "A partir de 450€/mes",
-    features: [
-      "Todo lo del Plan Presencia Digital",
-      "3 publicaciones semanales",
-      "2 Stories semanales",
-      "Gestión de mensajes directos",
-      "Edición de Reels",
-    ],
-    isHighlighted: true,
-  },
-  {
-    name: "Plan Impulsa",
-    subtitle: "Para olvidarte de todo",
-    price: "A partir de 850€/mes",
-    features: [
-      "Todo lo del Plan Conecta",
-      "Grabación de Reels",
-      "Gestión completa de comunidad",
-      "Colaboración con otros perfiles",
-    ],
-    isHighlighted: false,
-  },
-];
+const planIds = ["presencia", "conecta", "impulsa"] as const;
+
+const planFeatureCounts: Record<string, number> = {
+  presencia: 5,
+  conecta: 5,
+  impulsa: 4,
+};
+
+const highlightedPlan = "conecta";
+
+interface Plan {
+  name: string;
+  subtitle: string;
+  price: string;
+  features: string[];
+  isHighlighted: boolean;
+}
 
 export default function Pricing() {
+  const { t } = useTranslation();
+
+  const Planes: Plan[] = planIds.map((id) => ({
+    name: t(`pricing.plans.${id}.name`),
+    subtitle: t(`pricing.plans.${id}.subtitle`),
+    price: t(`pricing.plans.${id}.price`),
+    features: Array.from(
+      { length: planFeatureCounts[id] },
+      (_, index) => t(`pricing.plans.${id}.features.${index}`),
+    ),
+    isHighlighted: id === highlightedPlan,
+  }));
+
   const scrollToContact = () => {
     const element = document.getElementById("contacto");
     if (element) {
@@ -53,11 +44,10 @@ export default function Pricing() {
     <section id="Planes" className="py-16 md:py-24 bg-white">
       <div className="section-container">
         <h2 className="text-center text-petrol-900 font-bold mb-4 max-w-2xl mx-auto">
-          Elige la opción que más os cuide a ti y a tu negocio
+          {t("pricing.title")}
         </h2>
         <p className="text-center text-xl text-neutral-600 mb-12 md:mb-16 max-w-3xl mx-auto">
-          Todos los planes incluyen acompañamiento personalizado y comunicación
-          fluida. Porque no trabajamos para ti, trabajamos contigo.
+          {t("pricing.intro")}
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12 mt-24">
@@ -76,7 +66,7 @@ export default function Pricing() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-petrol-200 text-petrol-900 px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
                     <Sparkles size={16} />
-                    <span>Popular</span>
+                    <span>{t("pricing.popularBadge")}</span>
                   </div>
                 </div>
               )}
@@ -152,7 +142,7 @@ export default function Pricing() {
                       : "bg-petrol-400 text-light hover:bg-opacity-90"
                   }`}
                 >
-                  Más información
+                  {t("pricing.moreInfo")}
                 </button>
               </div>
             </div>
@@ -160,24 +150,21 @@ export default function Pricing() {
         </div>
 
         <p className="text-center italic text-neutral-600 !mt-20 mb-16 text-lg max-w-3xl mx-auto">
-          Cada proyecto es único. El precio final se adapta a tus objetivos,
-          número de redes y volumen de contenido que necesites.
+          {t("pricing.note")}
         </p>
 
         <div className="max-w-5xl mx-auto bg-gradient-to-br from-cosmos-terracotta/10 to-cosmos-petrol/10 rounded-3xl p-8 md:p-12 text-center">
           <h3 className="text-2xl md:text-4xl font-heading text-petrol-900 font-bold mb-4">
-            Plan Personalizado
+            {t("pricing.customPlan.title")}
           </h3>
           <p className="text-xl text-dark/80 mb-6">
-            ¿Necesitas algo diferente? Creamos un plan completamente
-            personalizado para ti. Fotografía profesional, edición de vídeo,
-            gestión de publicidad, branding completo... Cuéntanos qué necesitas.
+            {t("pricing.customPlan.description")}
           </p>
           <button
             onClick={scrollToContact}
             className="bg-petrol-400 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-opacity-90 hover:scale-105"
           >
-            Hablemos de tu proyecto
+            {t("pricing.customPlan.button")}
           </button>
         </div>
       </div>

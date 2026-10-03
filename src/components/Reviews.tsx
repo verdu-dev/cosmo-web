@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Star, Quote } from "lucide-react";
 
 interface Review {
@@ -7,31 +8,34 @@ interface Review {
   text: string;
 }
 
-const reviews: Review[] = [
+interface ReviewMeta {
+  id: string;
+  name: string;
+  company: string;
+}
+
+// Structural review data (proper nouns); testimonial copy stays in the
+// locale dictionaries.
+const reviewMeta: ReviewMeta[] = [
+  { id: "ignacio", name: "Ignacio", company: "Trainer" },
+  { id: "pablo", name: "Pablo Castells", company: "Intuity" },
+  { id: "anna", name: "Anna Olivella", company: "Taktikum" },
   {
-    name: "Ignacio",
-    company: "Trainer",
-    text: "Trabajé con Laia durante un año y la experiencia fue excepcional. Destaca por su visión estratégica, su capacidad de análisis y, sobre todo, por su impecable ejecución. Más allá de lo profesional, es una persona muy cercana, con un profundo trabajo de desarrollo personal que se refleja directamente en la calidad de su trabajo y en cómo acompaña a los demás. Si está valorando contratarla, mi recomendación es clara: no lo dudes ni un segundo.",
-  },
-  {
-    name: "Pablo Castells",
-    company: "Intuity",
-    text: "Treballar amb la Laia és un autèntic gust. Gràcies a ella hem pogut donar estructura i impuls a la nostra comunicació, guanyant fluïdesa, coherència i claredat. Ens ha acompanyat amb molta professionalitat en processos de màrqueting i publicitat, fent-ho tot fàcil i eficient. És una persona pragmàtica, responsable i molt compromesa amb el que fa. Es nota que hi posa el 100% i que cuida cada detall. Estem molt contents de seguir colaborant junts.",
-  },
-  {
-    name: "Anna Olivella",
-    company: "Taktikum",
-    text: "Treballar amb la Laia ha estat molt fàcil i agradable des del principi. Ha sabut entendre des del primer moment què és Taktikum i com volíem comunicar-nos, respectant el to, els valors i la sensibilitat del projecte. És implicada, organitzada i té molt bon criteri a l'hora de crear contingut, sempre amb una mirada cuidada i coherent. Personalment ens aporta tranquil·litat, professionalitat i confiança, i això en un projecte com el nostre és clau.",
-  },
-  {
+    id: "bruno",
     name: "Bruno Raventós",
     company: "Equazen (By Vitae Health Innovation)",
-    text: "Laia aporta una combinación genial de criterio estratégico y sensibilidad. Nos ha ayudado a comunicar con más precisión y a tomar mejores decisiones, siempre desde una mirada clara, práctica y alineada con nuestros valores. Una colaboración profesional y muy bien enfocada.",
   },
 ];
 
 export default function Reviews() {
+  const { t } = useTranslation();
   const [currentReview, setCurrentReview] = useState(0);
+
+  const reviews: Review[] = reviewMeta.map((meta) => ({
+    name: meta.name,
+    company: meta.company,
+    text: t(`reviews.${meta.id}.text`),
+  }));
 
   /* useEffect(() => {
     const timer = setInterval(() => {
@@ -78,12 +82,9 @@ export default function Reviews() {
       <div className="section-container relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-petrol-900 mb-4 font-bold">
-            Qué dicen nuestras clientas
+            {t("reviews.title")}
           </h2>
-          <p className="text-neutral-600 mx-auto text-xl">
-            Testimonios reales de profesionales que han transformado su
-            presencia digital
-          </p>
+          <p className="text-neutral-600 mx-auto text-xl">{t("reviews.intro")}</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -145,7 +146,7 @@ export default function Reviews() {
                     ? "w-12 h-3 bg-petrol-400"
                     : "w-3 h-3 bg-terracotta-200 hover:bg-petrol-400"
                 }`}
-                aria-label={`Ver review ${index + 1}`}
+                aria-label={t("reviews.viewReview", { number: index + 1 })}
               />
             ))}
           </div>

@@ -1,33 +1,50 @@
-import { Clock, Users, Heart, TrendingUp } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import {
+  Clock,
+  Users,
+  Heart,
+  TrendingUp,
+  type LucideIcon,
+} from "lucide-react";
 
-const benefits = [
+interface BenefitMeta {
+  icon: LucideIcon;
+  titleKey: string;
+  descriptionKey: string;
+}
+
+const benefitsMeta: BenefitMeta[] = [
   {
     icon: Clock,
-    title: "Ahorra horas cada semana",
-    description:
-      "Recupera tu tiempo para lo que realmente importa: tus pacientes, tu familia, tu autocuidado. Nosotras nos ocupamos de tus redes sociales.",
+    titleKey: "benefits.items.horas.title",
+    descriptionKey: "benefits.items.horas.description",
   },
   {
     icon: Users,
-    title: "Conecta con pacientes potenciales",
-    description:
-      "Atrae a las personas que realmente necesitan tu ayuda con contenido auténtico que refleja tu esencia y tu forma de trabajar.",
+    titleKey: "benefits.items.pacientes.title",
+    descriptionKey: "benefits.items.pacientes.description",
   },
   {
     icon: Heart,
-    title: "Siente que tu marca digital por fin refleja quién eres",
-    description:
-      "Una presencia online auténtica, cuidada y coherente con tu forma de acompañar. Sin perder tu esencia en el camino.",
+    titleKey: "benefits.items.esencia.title",
+    descriptionKey: "benefits.items.esencia.description",
   },
   {
     icon: TrendingUp,
-    title: "Haz crecer tu centro desde el conocimiento y sin agobios",
-    description:
-      "Crecimiento sostenible y consciente. Sin prisas, sin presión, pero con estrategia y propósito claro.",
+    titleKey: "benefits.items.crecimiento.title",
+    descriptionKey: "benefits.items.crecimiento.description",
   },
 ];
 
 export default function Benefits() {
+  const { t } = useTranslation();
+
+  const benefits = benefitsMeta.map((meta) => ({
+    icon: meta.icon,
+    title: t(meta.titleKey),
+    description: t(meta.descriptionKey),
+  }));
+
   return (
     <section
       id="beneficios"
@@ -36,12 +53,11 @@ export default function Benefits() {
       <div className="section-container">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-cosmos-petrol mb-4 font-bold">
-            ¿Por qué <span className="text-petrol-400">delegar</span> tus redes
-            sociales?
+            {t("benefits.titleBefore")}
+            <span className="text-petrol-400">{t("benefits.titleAccent")}</span>
+            {t("benefits.titleAfter")}
           </h2>
-          <p className="text-neutral-600 text-xl">
-            Recupera tu tiempo y potencia tu presencia digital
-          </p>
+          <p className="text-neutral-600 text-xl">{t("benefits.subtitle")}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -79,7 +95,7 @@ export default function Benefits() {
             <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(62,92,100,0.25)] transition-all duration-500 transform">
               <img
                 src="/Management.webp"
-                alt="Organización y planificación profesional"
+                alt={t("benefits.imageAlt")}
                 className="size-full object-cover transform transition-transform duration-700"
               />
             </div>

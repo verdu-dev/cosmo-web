@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight, Star, TrendingUp } from "lucide-react";
 
 interface Client {
@@ -14,98 +15,83 @@ interface Client {
   highlightsTitle?: string;
 }
 
-const clients: Client[] = [
+interface ClientMeta {
+  id: string;
+  name: string;
+  image: string;
+  instagramFeed: string;
+  instagramUrl: string;
+}
+
+// Structural client data (proper nouns + assets) that is identical in every
+// locale; the translatable copy lives in the locale dictionaries.
+const clientMeta: ClientMeta[] = [
   {
+    id: "taktikum",
     name: "@taktikum",
-    type: "Gabinete Psicopedagógico",
     image: "https://placehold.co/300x300/E7DCC8/3E5C64?text=Cliente+1",
     instagramFeed: "/Taktikum.webp",
     instagramUrl: "https://www.instagram.com/taktikum/",
-    growth: "+38% de visualizaciones",
-    followers: "+27% más interacción",
-    description:
-      "Buscaban una presencia digital sólida más que captar nuevos clientes. Creamos contenido de valor y un nuevo diseño de feed más coherente con su identidad y su forma de trabajar, potenciando la interacción.",
-    highlightsTitle: "Último mes:",
-    highlights: [
-      "+38% de visualizaciones de personas nuevas",
-      "+27% más interacción VS anterior",
-    ],
   },
   {
+    id: "equazenes",
     name: "@equazenes",
-    type: "Complementos alimenticios - Laboratorio farmacéutico",
     image: "https://placehold.co/300x300/E7DCC8/3E5C64?text=Cliente+2",
     instagramFeed: "/Equazenes.webp",
     instagramUrl: "https://www.instagram.com/equazenes/",
-    growth: "+31% de visualizaciones",
-    followers: "+22% personas alcanzadas",
-    description:
-      "Creamos el perfil desde cero, diseñamos los contenidos y gestionamos la comunidad. Su crecimiento es orgánico y sigue una línea clara y alineada con su objetivo, igual que el resto de marcas con las que trabajamos.",
-    highlightsTitle: "Último mes:",
-    highlights: [
-      "+31% de visualizaciones de usuarios nuevos",
-      "+22% personas alcanzadas VS mes anterior",
-    ],
   },
   {
+    id: "totterapia",
     name: "@totterapia",
-    type: "Centro de salud multidisciplinar",
     image: "https://placehold.co/300x300/E7DCC8/3E5C64?text=Cliente+3",
     instagramFeed: "/Totterapia.webp",
     instagramUrl: "https://www.instagram.com/totterapia/",
-    growth: "+38% de crecimiento",
-    followers: "+52% de audiencia",
-    description:
-      "Reactivamos sus redes con una estrategia coherente, grabación y edición de vídeos y presencia en todas las redes sociales. En pocos meses están creciendo de forma orgánica y cada semana llegan mensajes de personas interesadas en sus servicios.",
-    highlightsTitle: "Último mes:",
-    highlights: [
-      "+38% de crecimiento en visualizaciones",
-      "+52% de audiencia nueva cada mes",
-    ],
   },
   {
+    id: "intuity",
     name: "@Intuity_Co",
-    type: "Coaching Sistémico y Transpersonal",
     image: "https://placehold.co/300x300/E7DCC8/3E5C64?text=Cliente+4",
     instagramFeed: "/Intuity.webp",
     instagramUrl: "https://www.instagram.com/intuity_co/",
-    growth: "+34% de visualizaciones",
-    followers: "+23% más interacción",
-    description:
-      "Optimizamos su Instagram, aplicamos una estrategia clara y dejamos una base sólida para que pudieran continuar creciendo por su cuenta. Actualmente gestionan su día a día en redes mientras desde Cosmo seguimos editando sus reels, manteniendo la coherencia visual y la calidad del contenido.",
-    highlightsTitle: "Último mes:",
-    highlights: [
-      "+34% de visualizaciones de audiencia nuevas",
-      "+23% más interacción en sus reels editados",
-    ],
   },
 ];
 
-const testimonials = [
-  {
-    text: "Trabajar con Cosmos ha sido liberador. Por fin tengo tiempo para mis pacientes sin sentir que descido mi presencia online. Laia entiende perfectamente lo que quiero transmitir.",
-    author: "María González",
-    role: "Psicóloga y Terapeuta",
-    image: "https://placehold.co/100x100/D9A382/FFFFFF?text=MG",
-  },
-  {
-    text: "No solo gestionan mi Instagram, sino que lo hacen con una sensibilidad que pocas agencias tienen. Se nota que conocen el mundo de la salud mental. Mi comunidad ha crecido de forma orgánica y genuina.",
-    author: "Laura Martínez",
-    role: "Directora de Centro de Psicología",
-    image: "https://placehold.co/100x100/3E5C64/FFFFFF?text=LM",
-  },
-  {
-    text: "Cosmos me ha ayudado a encontrar mi voz en redes. Antes me sentía perdida y ahora tengo una presencia digital que realmente me representa. Y sin dedicarle ni un minuto de mi tiempo.",
-    author: "Ana Sánchez",
-    role: "Coach y Facilitadora",
-    image: "https://placehold.co/100x100/C48F71/FFFFFF?text=AS",
-  },
+// Carousel testimonial data (kept for the disabled/inactive carousel).
+const testimonialImages = [
+  "https://placehold.co/100x100/D9A382/FFFFFF?text=MG",
+  "https://placehold.co/100x100/3E5C64/FFFFFF?text=LM",
+  "https://placehold.co/100x100/C48F71/FFFFFF?text=AS",
 ];
+
+const testimonialAuthors = ["María González", "Laura Martínez", "Ana Sánchez"];
 
 export default function Testimonials() {
+  const { t } = useTranslation();
   const [currentClient, setCurrentClient] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [showClientDetail, setShowClientDetail] = useState(false);
+
+  const clients: Client[] = clientMeta.map((meta) => ({
+    name: meta.name,
+    type: t(`testimonials.clients.${meta.id}.type`),
+    image: meta.image,
+    instagramFeed: meta.instagramFeed,
+    instagramUrl: meta.instagramUrl,
+    growth: t(`testimonials.clients.${meta.id}.growth`),
+    followers: t(`testimonials.clients.${meta.id}.followers`),
+    description: t(`testimonials.clients.${meta.id}.description`),
+    highlightsTitle: t(`testimonials.clients.${meta.id}.highlightsTitle`),
+    highlights: [0, 1].map((index) =>
+      t(`testimonials.clients.${meta.id}.highlights.${index}`),
+    ),
+  }));
+
+  const testimonials = [0, 1, 2].map((index) => ({
+    text: t(`testimonials.carousel.${index}.text`),
+    author: testimonialAuthors[index],
+    role: t(`testimonials.carousel.${index}.role`),
+    image: testimonialImages[index],
+  }));
 
   const nextClient = () => {
     setCurrentClient((prev) => (prev + 1) % clients.length);
@@ -159,11 +145,10 @@ export default function Testimonials() {
     <section id="clientes" className="py-16 md:py-24 bg-terracotta-50">
       <div className="section-container">
         <h2 className="text-center text-petrol-900 font-bold mb-4">
-          Nuestras clientas
+          {t("testimonials.title")}
         </h2>
         <p className="text-center text-xl text-neutral-600 mb-12 md:mb-16 max-w-3xl mx-auto">
-          Cada proyecto es único, como cada persona que acompañamos. Estos son
-          algunos de los resultados que hemos conseguido juntas.
+          {t("testimonials.intro")}
         </p>
 
         <div className="mb-16">
@@ -223,7 +208,9 @@ export default function Testimonials() {
                   </div>
                   <img
                     src={clients[currentClient].instagramFeed}
-                    alt={`Feed de ${clients[currentClient].name}`}
+                    alt={t("testimonials.feedAlt", {
+                      name: clients[currentClient].name,
+                    })}
                     className="rounded-2xl aspect-square shadow-lg w-full transform scale-[1.4] group-hover:scale-[1.45] transition-transform duration-500 object-cover"
                   />
                 </a>
@@ -233,7 +220,7 @@ export default function Testimonials() {
             <button
               onClick={prevClient}
               className="hidden md:block absolute -left-4 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-petrol-400 hover:text-petrol-50 transition-all duration-200"
-              aria-label="Cliente anterior"
+              aria-label={t("testimonials.prevClient")}
             >
               <ChevronLeft className="text-cosmos-petrol" size={24} />
             </button>
@@ -241,7 +228,7 @@ export default function Testimonials() {
             <button
               onClick={nextClient}
               className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-petrol-400 hover:text-petrol-50 transition-all duration-200"
-              aria-label="Siguiente cliente"
+              aria-label={t("testimonials.nextClient")}
             >
               <ChevronRight className="text-cosmos-petrol" size={24} />
             </button>
@@ -257,78 +244,11 @@ export default function Testimonials() {
                     ? "bg-petrol-400 w-8"
                     : "bg-terracotta-200"
                 }`}
-                aria-label={`Ver cliente ${index + 1}`}
+                aria-label={t("testimonials.viewClient", { number: index + 1 })}
               />
             ))}
           </div>
         </div>
-
-        {/* Testimonials section - commented out for future use
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-center text-cosmos-petrol mb-12">Lo que dicen nuestras clientas...</h2>
-
-          <div className="relative">
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
-              <div className="flex justify-center mb-6">
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="text-cosmos-terracotta fill-cosmos-terracotta" size={24} />
-                  ))}
-                </div>
-              </div>
-
-              <blockquote className="text-xl md:text-2xl text-dark/80 text-center mb-8 leading-relaxed italic">
-                "{testimonials[currentTestimonial].text}"
-              </blockquote>
-
-              <div className="flex items-center justify-center space-x-4">
-                <img
-                  src={testimonials[currentTestimonial].image}
-                  alt={testimonials[currentTestimonial].author}
-                  className="w-16 h-16 rounded-full"
-                />
-                <div className="text-left">
-                  <p className="font-medium text-cosmos-petrol">
-                    {testimonials[currentTestimonial].author}
-                  </p>
-                  <p className="text-sm text-dark/60">
-                    {testimonials[currentTestimonial].role}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-terracotta-50 transition-all duration-200"
-              aria-label="Testimonio anterior"
-            >
-              <ChevronLeft className="text-cosmos-petrol" size={24} />
-            </button>
-
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-terracotta-50 transition-all duration-200"
-              aria-label="Siguiente testimonio"
-            >
-              <ChevronRight className="text-cosmos-petrol" size={24} />
-            </button>
-          </div>
-
-          <div className="flex justify-center mt-6 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentTestimonial ? 'bg-cosmos-terracotta w-8' : 'bg-petrol-700/30'
-                }`}
-                aria-label={`Ver testimonio ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-        */}
       </div>
     </section>
   );
