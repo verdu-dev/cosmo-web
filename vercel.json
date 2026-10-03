@@ -1,6 +1,12 @@
 {
+  "redirects": [
+    { "source": "/ca", "destination": "/ca/", "permanent": true },
+    { "source": "/en", "destination": "/en/", "permanent": true }
+  ],
   "rewrites": [
+    { "source": "/ca/", "destination": "/index.html" },
     { "source": "/ca/:path*", "destination": "/index.html" },
+    { "source": "/en/", "destination": "/index.html" },
     { "source": "/en/:path*", "destination": "/index.html" }
   ]
 }
